@@ -168,7 +168,7 @@ body.dark #navitems li a.active:hover{
     position: absolute;
     inset: 0;
 
-    background-image: url("6008B2A2-7F7C-499F-872D-9C6E4F266EBA.png");
+    background-image: url("background.png");
     background-size: cover;  
     background-repeat: no-repeat;  
     background-position: center top;
@@ -213,7 +213,7 @@ body.dark #navitems li a.active:hover{
 
 @font-face {
     font-family: Neon;
-    src: url(VOLACROME.otf);
+    src: url(volacrome.otf);
 }
 
 #cover p{
