@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="home.css">
     <script src="home.js" defer></script>
 </head>
@@ -25,11 +28,33 @@
     <main>
         <div id="cover">
             <h1 id="neon">W e l c o m e.</h1>
-            <p id="pneon">This website contains my personal opinions.</p>
+            <p id="pneon">This website contains my personal<br><span class="word-window"><span class="word-glow" aria-hidden="true"><span>opinions</span></span><span class="word-viewport" aria-live="polite"><span id="rotating-word">opinions</span></span></span></p>
         </div>
-        <div class="content">
-
-        </div>
+        <section class="content" id="page-cards" aria-label="Meine Seiten">
+            <button class="page-card add-page" id="add-page" type="button" aria-label="Neue Seite erstellen">
+                <svg class="add-page-border" viewBox="0 0 160 64" preserveAspectRatio="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="add-page-gradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="160" y2="64">
+                            <stop offset="0%" stop-color="rgb(0, 183, 255)"/>
+                            <stop offset="100%" stop-color="rgb(255, 0, 98)"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M14 2H8A6 6 0 0 0 2 8V14 M146 2H152A6 6 0 0 1 158 8V14 M158 50V56A6 6 0 0 1 152 62H146 M14 62H8A6 6 0 0 1 2 56V50 M29 2H39 M54 2H62 M78 2H89 M105 2H114 M128 2H132 M158 28V36 M132 62H124 M109 62H100 M84 62H76 M62 62H52 M37 62H28 M2 36V29" fill="none" stroke="url(#add-page-gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg class="add-plus" viewBox="0 0 48 48" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="add-plus-gradient" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="rgb(0, 183, 255)"/>
+                            <stop offset="100%" stop-color="rgb(255, 0, 98)"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M24 12V36 M12 24H36" fill="none" stroke="url(#add-plus-gradient)" stroke-width="6" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <form class="page-card page-name-form" id="page-name-form" hidden>
+                <input id="page-name" name="name" type="text" size="1" maxlength="60" aria-label="Name der Seite" required>
+            </form>
+        </section>
     </main>
     <footer></footer>
 </body>
